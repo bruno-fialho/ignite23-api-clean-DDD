@@ -25,11 +25,6 @@ describe('Create Question', () => {
       attachmentsIds: ['1', '2'],
     })
 
-    console.log(
-      'inMemoryQuestionsRepository.items[0]',
-      JSON.stringify(inMemoryQuestionsRepository.items[0], null, 2),
-    )
-
     expect(result.isRight()).toBe(true)
     expect(inMemoryQuestionsRepository.items[0]).toEqual(result.value?.question)
     expect(
